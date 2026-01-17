@@ -3,124 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dept</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Departments</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f6f9;
+            color: #333;
+        }
+
+        .page-content {
+            padding: 60px 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            color: #0d4a6e;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: "";
+            width: 70px;
+            height: 3px;
+            background: #f1c40f;
+            display: block;
+            margin: 10px auto 0;
+        }
+
+        /* Departments */
+        .departments-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-bottom: 70px;
+        }
+
+        .department-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .department-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+        }
+
+        .department-header {
+            background: #0d4a6e;
+            padding: 15px;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .department-header h3 {
+            color: #fff;
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .department-body {
+            padding: 20px;
+            font-size: 14.5px;
+            line-height: 1.6;
+        }
+
+        /* Leadership Section */
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .leadership-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .leader-photo-container,
+        .leader-photo {
+            position: relative;
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .leader-photo-container img,
+        .leader-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .leader-img {
+            height: 220px;
+            background: #0d4a6e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 60px;
+        }
+
+        .leader-info {
+            padding: 20px;
+        }
+
+        .leader-info h3 {
+            margin-top: 0;
+            color: #0d4a6e;
+            font-size: 20px;
+        }
+
+        .leader-info .title {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .leader-info p {
+            font-size: 14.5px;
+            line-height: 1.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 26px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <!-- Department Page Content -->
-        <div id="department-page" class="page-content">
-            <section class="departments-section">
-                <div class="container">
-                    <h2 class="section-title">Departments</h2>
 
-                    <div class="departments-container">
-                        <div class="department-card">
-                            <div class="department-header">
-                                <h3>Computer Engineering</h3>
-                            </div>
-                            <div class="department-body">
-                                <p>The Computer Engineering department offers comprehensive programs in software
-                                    development, data structures, algorithms, and computer networks. Our labs are
-                                    equipped with the latest hardware and software tools.</p>
-                                <p><strong>Programs Offered:</strong> B.E. Computer Engineering, M.E. Computer
-                                    Engineering</p>
-                            </div>
-                        </div>
+<div id="department-page" class="page-content">
+    <section class="departments-section">
+        <div class="container">
 
-                        <div class="department-card">
-                            <div class="department-header">
-                                <h3>Information Technology</h3>
-                            </div>
-                            <div class="department-body">
-                                <p>The IT department focuses on emerging technologies like cloud computing,
-                                    cybersecurity, data science, and web technologies. We emphasize practical skills
-                                    alongside theoretical knowledge.</p>
-                                <p><strong>Programs Offered:</strong> B.E. Information Technology, M.E. Information
-                                    Technology</p>
-                            </div>
-                        </div>
+            <h2 class="section-title">Departments</h2>
 
-                        <div class="department-card">
-                            <div class="department-header">
-                                <h3>Mechanical Engineering</h3>
-                            </div>
-                            <div class="department-body">
-                                <p>Our Mechanical Engineering department offers training in design, manufacturing,
-                                    thermal sciences, and robotics. We have advanced workshops and CAD/CAM labs for
-                                    hands-on experience.</p>
-                                <p><strong>Programs Offered:</strong> B.E. Mechanical Engineering, M.E. Mechanical
-                                    Engineering</p>
-                            </div>
-                        </div>
-
-                        <div class="department-card" id="department-card">
-                            <div class="department-header">
-                                <h3>Electrical Engineering</h3>
-                            </div>
-                            <div class="department-body">
-                                <p>The Electrical Engineering department covers power systems, control systems,
-                                    electronics, and renewable energy technologies. Our labs include high-voltage
-                                    equipment and automation systems.</p>
-                                <p><strong>Programs Offered:</strong> B.E. Electrical Engineering, M.E. Electrical
-                                    Engineering</p>
-                            </div>
-                        </div>
+            <div class="departments-container">
+                <div class="department-card">
+                    <div class="department-header">
+                        <h3>Computer Engineering</h3>
                     </div>
-
-                    <div class="leadership-section">
-                        <h2 class="section-title">Leadership</h2>
-
-                        <div class="leadership-grid">
-                            <div class="leadership-card Former">
-                                <div class="leader-photo container">
-                                    <img src="president.jpg" alt="Late Dr. Shivajirao S. Jhondele" class="leader-photo">
-                                    <div class="photo-overlay"></div>
-                                </div>
-                                <div class="leader-info">
-                                    <h3>Former President Desk</h3>
-                                    <span class="title">Late Dr. Shivajirao S. Jhondele</span>
-                                    <p>Founder and visionary behind the SSJ institutions, Dr. Jhondele dedicated his
-                                        life to making quality technical education accessible to students in
-                                        Maharashtra. His commitment to educational excellence continues to inspire our
-                                        institution's values and mission.</p>
-                                </div>
-                            </div>
-
-                            <div class="leadership-card">
-                                <div class="leader-photo-container">
-                                    <img src="Vice president.jpg" alt="Mrs. Geeta Jhondele" class="leader-photo">
-                                    <div class="photo-overlay"></div>
-                                </div>
-                                <div class="leader-info">
-                                    <h3>Vice-President Desk</h3>
-                                    <span class="title">Mrs. Geeta Jhondele</span>
-                                    <p>Continuing the legacy of her husband, Mrs. Geeta Jhondele has been instrumental
-                                        in expanding the institution's reach and maintaining its academic standards.
-                                        Under her leadership, the institutions have grown to include multiple campuses
-                                        and diversified program offerings.</p>
-                                </div>
-                            </div>
-
-                            <div class="leadership-card">
-                                <div class="leader-img">
-                                    <i class="fas fa-user-graduate"></i>
-                                </div>
-                                <div class="leader-info">
-                                    <h3>Principal Foreword</h3>
-                                    <span class="title">Mr. Ramesh Kashiraya Nandarge, Principal</span>
-                                    <p>As Principal, I am proud to lead an institution with such a rich legacy. Our
-                                        focus remains on providing industry-relevant education, fostering innovation,
-                                        and developing well-rounded professionals. We continuously update our curriculum
-                                        and infrastructure to meet global standards while staying rooted in our core
-                                        values.</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="department-body">
+                        <p>Software development, data structures, algorithms, and computer networks with modern labs.</p>
+                        <p><strong>Programs:</strong> B.E, M.E</p>
                     </div>
                 </div>
-            </section>
-        </div>
 
-        <script src="script.js"></script>
+                <div class="department-card">
+                    <div class="department-header">
+                        <h3>Information Technology</h3>
+                    </div>
+                    <div class="department-body">
+                        <p>Cloud computing, cybersecurity, data science, and web technologies.</p>
+                        <p><strong>Programs:</strong> B.E, M.E</p>
+                    </div>
+                </div>
+
+                <div class="department-card">
+                    <div class="department-header">
+                        <h3>Mechanical Engineering</h3>
+                    </div>
+                    <div class="department-body">
+                        <p>Design, manufacturing, thermal sciences, robotics with CAD/CAM labs.</p>
+                        <p><strong>Programs:</strong> B.E, M.E</p>
+                    </div>
+                </div>
+
+                <div class="department-card">
+                    <div class="department-header">
+                        <h3>Electrical Engineering</h3>
+                    </div>
+                    <div class="department-body">
+                        <p>Power systems, control systems, electronics, and renewable energy.</p>
+                        <p><strong>Programs:</strong> B.E, M.E</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title">Leadership</h2>
+
+            <div class="leadership-grid">
+                <div class="leadership-card">
+                    <div class="leader-photo">
+                        <img src="president.jpg" alt="Late Dr. Shivajirao S. Jhondele">
+                    </div>
+                    <div class="leader-info">
+                        <h3>Former President Desk</h3>
+                        <span class="title">Late Dr. Shivajirao S. Jhondele</span>
+                        <p>Founder and visionary who dedicated his life to quality technical education.</p>
+                    </div>
+                </div>
+
+                <div class="leadership-card">
+                    <div class="leader-photo-container">
+                        <img src="Vice president.jpg" alt="Mrs. Geeta Jhondele">
+                    </div>
+                    <div class="leader-info">
+                        <h3>Vice-President Desk</h3>
+                        <span class="title">Mrs. Geeta Jhondele</span>
+                        <p>Instrumental in expanding the institution while maintaining academic excellence.</p>
+                    </div>
+                </div>
+
+                <div class="leadership-card">
+                    <div class="leader-img">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="leader-info">
+                        <h3>Principal Foreword</h3>
+                        <span class="title">Mr. Ramesh K. Nandarge</span>
+                        <p>Focused on innovation, industry relevance, and holistic student development.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

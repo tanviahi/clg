@@ -3,47 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>about</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>About Us</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+
+        .page-content {
+            padding: 60px 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            color: #0d4a6e;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: "";
+            width: 70px;
+            height: 3px;
+            background-color: #f1c40f;
+            display: block;
+            margin: 10px auto 0;
+        }
+
+        .about-content {
+            display: flex;
+            gap: 40px;
+            margin-top: 50px;
+            align-items: center;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 6px;
+            border: 4px solid #0d4a6e;
+        }
+
+        .about-text h3 {
+            color: #0d4a6e;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        .about-text p {
+            line-height: 1.7;
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+
+        .about-text h4 {
+            margin-top: 20px;
+            color: #0d4a6e;
+        }
+
+        .about-text ul {
+            padding-left: 20px;
+        }
+
+        .about-text ul li {
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-image img {
+                max-width: 100%;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <!-- About Page Content -->
-        <div id="about-page" class="page-content">
-            <section class="about-section">
-                <div class="container">
-                    <h2 class="section-title">About Us</h2>
 
-                    <div class="about-content " id="aboutcontent" >
-                        <div class="about-image">
-                            <div class="image-placeholder">
-                                <img src="Vision.jpg" alt="Late Dr. Shivajirao S. Jhondele">
+    <div id="about-page" class="page-content">
+        <section class="about-section">
+            <div class="container">
+                <h2 class="section-title">About Us</h2>
 
-                            </div>
-                        </div>
-                        <div class="about-text">
-                            <h3>Our Legacy & Vision</h3>
-                            <p>Founded by the visionary Late Dr. Shivajirao S. Jhondele, our institutions have been at
-                                the forefront of technical education in Maharashtra for decades. With a commitment to
-                                excellence and innovation, we strive to create an environment that fosters intellectual
-                                growth and professional development.</p>
-                            <p>Our campuses across Thane district - Dombivli, Asangaon, and Ambernath - are equipped
-                                with modern infrastructure, experienced faculty, and industry connections to provide
-                                comprehensive technical education.</p>
-                            <p>We believe in holistic development, combining academic rigor with extracurricular
-                                activities to prepare students for successful careers in engineering and management.</p>
+                <div class="about-content" id="aboutcontent">
+                    <div class="about-image">
+                        <img src="Vision.jpg" alt="Late Dr. Shivajirao S. Jhondele">
+                    </div>
 
-                            <h4>Our Institutions:</h4>
-                            <ul>
-                                <li><strong>SSJP College of Engineering</strong> - Dombivli</li>
-                                <li><strong>SSJP Polytechnic</strong> - Asangaon</li>
-                                <li><strong>SSJP College of Engineering & Technology</strong> - Ambernath</li>
-                            </ul>
-                        </div>
+                    <div class="about-text">
+                        <h3>Our Legacy & Vision</h3>
+                        <p>
+                            Founded by the visionary Late Dr. Shivajirao S. Jhondele, our institutions have been at
+                            the forefront of technical education in Maharashtra for decades.
+                        </p>
+                        <p>
+                            Our campuses across Thane district - Dombivli, Asangaon, and Ambernath - are equipped
+                            with modern infrastructure, experienced faculty, and industry connections.
+                        </p>
+                        <p>
+                            We believe in holistic development, combining academic rigor with extracurricular
+                            activities to prepare students for successful careers.
+                        </p>
+
+                        <h4>Our Institutions:</h4>
+                        <ul>
+                            <li><strong>SSJP College of Engineering</strong> – Dombivli</li>
+                            <li><strong>SSJP Polytechnic</strong> – Asangaon</li>
+                            <li><strong>SSJP College of Engineering & Technology</strong> – Ambernath</li>
+                        </ul>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
+    </div>
 
-        <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
